@@ -13,10 +13,8 @@ function Square(props) {
 
 class Board extends React.Component {
     renderSquare(i) {
-        console.log(this.props.winner);
         let win = this.calculateIsWin(i);
 
-        console.log(win);
         return (
             <Square
                 value={this.props.squares[i]}
@@ -124,7 +122,6 @@ class Game extends React.Component {
 
         let status;
 
-        console.log(winner);
         if (winner) {
             status = 'Winner: ' + current.squares[winner[0]];
         } else if (draw) {
